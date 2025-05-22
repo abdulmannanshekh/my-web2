@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Islamic Hacker Terminal</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="clock" class="floating-clock"></div>
+
+  <div class="container">
+    <h1>☪ ইসলামিক হ্যাকার টার্মিনাল ☠</h1>
+    
+    <!-- হিজরি ক্যালেন্ডার -->
+    <div id="hijri-date"></div>
+
+    <!-- কুরআনের আয়াত -->
+    <div id="quran-verse" class="quran"></div>
+
+    <!-- হাদিস লিস্ট -->
+    <div id="hadith-box"></div>
+
+    <!-- নামাজের সময় -->
+    <div id="prayer-times"></div>
+
+    <!-- হ্যাকিং টুল -->
+    <form id="hackToolForm">
+      <input type="text" id="target" placeholder="টার্গেট URL">
+      <button type="submit">হ্যাকিং শুরু করুন</button>
+    </form>
+
+    <!-- এনক্রিপশন টুল -->
+    <input type="text" id="plainText" placeholder="টেক্সট লিখুন">
+    <button onclick="encryptText()">এনক্রিপ্ট করুন</button>
+    <p id="encryptedText"></p>
+
+    <!-- ইউজার লগইন -->
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="ইউজারনেম">
+      <input type="password" id="password" placeholder="পাসওয়ার্ড">
+      <button type="submit">লগইন</button>
+    </form>
+
+    <!-- ক্যালকুলেটর -->
+    <button onclick="toggleCalculator()" class="calc-btn">🧮 ক্যালকুলেটর চালু করো</button>
+    <div id="calculator" class="calculator hidden">
+      <input type="text" id="display" disabled />
+      <div class="buttons">
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">9</button>
+        <button onclick="press('/')">/</button>
+
+        <button onclick="press('4')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('6')">6</button>
+        <button onclick="press('*')">*</button>
+
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+        <button onclick="press('-')">-</button>
+
+        <button onclick="press('0')">0</button>
+        <button onclick="press('.')">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="press('+')">+</button>
+
+        <button onclick="clearDisplay()" class="clear">C</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

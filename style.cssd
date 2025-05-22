@@ -1,0 +1,98 @@
+body {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #0f0;
+}
+
+.calc-btn {
+  background-color: #111;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 10px 20px;
+  margin: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.calc-btn:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+.calculator {
+  width: 300px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #111;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+}
+
+.calculator input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background: black;
+  color: #0f0;
+  border: 1px solid #0f0;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.buttons button {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #222;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+.clear {
+  grid-column: span 4;
+  background-color: red;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.floating-clock {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff00;
+  animation: floatDown 10s linear infinite;
+}
+
+@keyframes floatDown {
+  0% { top: -50px; }
+  100% { top: 100%; }
+}

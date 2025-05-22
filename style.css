@@ -1,0 +1,111 @@
+
+body {
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 15px #00ff00;
+}
+
+.calc-btn {
+  background-color: #111;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  padding: 12px 25px;
+  margin: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.calc-btn:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+.calculator {
+  width: 320px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #111;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+}
+
+.calculator input {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background: black;
+  color: #0f0;
+  border: 1px solid #0f0;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+}
+
+.buttons button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: #222;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.buttons button:hover {
+  background-color: #00ff00;
+  color: black;
+}
+
+.clear {
+  grid-column: span 4;
+  background-color: red;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.floating-clock {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff00;
+  animation: floatDown 12s linear infinite;
+}
+
+@keyframes floatDown {
+  0% { top: -50px; }
+  100% { top: 100%; }
+}
+
+input, button {
+  margin: 5px;
+}
+
+.quran, #hijri-date, #hadith-box, #prayer-times {
+  margin: 15px 0;
+  font-size: 1.1em;
+  color: #00ff00;
+}

@@ -1,4 +1,3 @@
-
 function updateClock() {
   const now = new Date();
   document.getElementById("clock").innerText = now.toLocaleTimeString();
@@ -73,3 +72,9 @@ function calculate() {
 function clearDisplay() {
   document.getElementById("display").value = "";
 }
+
+// হ্যামবার্গার মেনু টগল
+document.getElementById('hamburger').addEventListener('click', function() {
+  this.classList.toggle('active');
+  document.getElementById('sidebar').classList.toggle('active');
+});

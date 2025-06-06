@@ -1,4 +1,3 @@
-
 body {
   background-color: #000;
   color: #00ff00;
@@ -108,4 +107,92 @@ input, button {
   margin: 15px 0;
   font-size: 1.1em;
   color: #00ff00;
+}
+
+/* হ্যামবার্গার বাটন */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+  outline: none;
+  animation: shake 0.5s infinite alternate;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #00ff00;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* ক্রস বাটন স্টাইল */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* কাঁপানো অ্যানিমেশন */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(5px); }
+}
+
+/* সাইডবার */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #1a1a1a;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: #00ff00;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #333;
+}
+
+/* মোবাইল রেসপন্সিভ */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    left: -200px;
+  }
 }
